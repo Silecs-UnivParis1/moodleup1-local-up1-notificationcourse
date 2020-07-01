@@ -1,0 +1,12 @@
+.cache {
+	display: none;
+}
+.notificationlabel {
+    margin-left:16%;
+}
+.notificationgras {
+    font-weight: 700;
+}
+#id_submitbutton {
+    font-weight: 700;
+}
