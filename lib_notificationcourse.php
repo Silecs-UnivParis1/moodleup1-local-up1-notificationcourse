@@ -12,7 +12,7 @@
  * @return object $message
  */
 function get_notificationcourse_message($formdata, $params) {
-    $message = new object();
+    $message = new stdClass();
     $message->type = $formdata->message;
     $message->from = $params['shortnamesite'];
     if ($formdata->message && $formdata->message==1) {
