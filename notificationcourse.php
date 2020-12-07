@@ -5,6 +5,8 @@
  * @copyright  2012-2016 Silecs {@link http://www.silecs.info/societe}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+ini_set("memory_limit", "-1");
+
 require_once("../../config.php");
 require_once('lib_notificationcourse.php');
 require_once('notificationcourse_form.php');
