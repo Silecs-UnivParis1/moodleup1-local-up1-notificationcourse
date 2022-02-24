@@ -35,9 +35,9 @@ function get_notificationcourse_message($formdata, $params) {
     $message->bodyhtml = $message->body ;
     $message->body = str_replace('[[linkactivity]]', $params['urlactivite'], $message->body);
     $message->body = str_replace('[[linkcourse]]', $params['urlcourse'], $message->body);
-    $message->bodyhtml = str_replace('[[linkactivity]]', '<a href="' . $params['urlactivite'] . '>'
+    $message->bodyhtml = str_replace('[[linkactivity]]', '<a href="' . $params['urlactivite'] . '">'
         . $params['urlactivite'] . '</a>', $message->bodyhtml);
-    $message->bodyhtml = str_replace('[[linkcourse]]', '<a href="' . $params['urlcourse'] . '>'
+    $message->bodyhtml = str_replace('[[linkcourse]]', '<a href="' . $params['urlcourse'] . '">'
         . $params['urlcourse'] . '</a>', $message->bodyhtml);
 
     $message->bodyhtml = str_replace("\n", '<br />', $message->bodyhtml);
