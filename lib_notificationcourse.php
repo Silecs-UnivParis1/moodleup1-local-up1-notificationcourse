@@ -233,8 +233,9 @@ function get_not_viewer_yet($instanceid, $courseContext) {
     require_once("$CFG->dirroot/report/participation/locallib.php");
 
     $logtable = report_participation_get_log_table_name();
-    $usernamefields = get_all_user_name_fields(true, 'u');
-
+    $userfieldsapi = \core_user\fields::for_name();
+    $usernamefields = $userfieldsapi->get_sql('u', false, '', '', false)->selects;
+    
     list($relatedctxsql, $params) = $DB->get_in_or_equal($courseContext->get_parent_context_ids(true), SQL_PARAMS_NAMED, 'relatedctx');
     $params['instanceid'] = $instanceid;
     $params['timefrom'] = 0;
